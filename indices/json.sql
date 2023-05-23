@@ -53,3 +53,21 @@ explain analyze
 Select info->>'score'
 FROM students
 WHERE info->>'student' = '3212'
+
+
+values (
+		texto(30),
+        i,
+        data(),
+        numero(2),
+        texto(30),
+        texto(10),
+        texto(2),
+        texto(30),
+        numero(1),
+        {
+            "telefone1" : ' || numero(11) || ',
+            "telefone2" : "' || numero(11) || '",
+            "timeFutebol" : ' || time() || '
+        }')::json)
+);
